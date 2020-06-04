@@ -57,15 +57,13 @@ class CartProduct {
     });
   }
   getData() {
-    const thisCartProduct = this;
-    const productData = {
-      id: thisCartProduct.id,
-      amount: thisCartProduct.amount,
-      price: thisCartProduct.price,
-      priceSingle: thisCartProduct.priceSingle,
-      params: thisCartProduct.params,
-    };
-    return productData;
+    const thisCartProduct = this; return (
+      thisCartProduct.id,
+      thisCartProduct.amount,
+      thisCartProduct.price,
+      thisCartProduct.priceSingle,
+      thisCartProduct.params
+    );
   }
 }
 

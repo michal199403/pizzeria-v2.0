@@ -89,8 +89,8 @@ class Cart {
     const url = settings.db.url + '/' + settings.db.order;
 
     const payload = {
-      address: thisCart.dom.address,
-      phone: thisCart.dom.phone,
+      address: thisCart.dom.address.value,
+      phone: thisCart.dom.phone.value,
       totalPrice: thisCart.totalPrice,
       totalNumber: thisCart.totalNumber,
       subtotalPrice: thisCart.subtotalPrice,
@@ -99,8 +99,8 @@ class Cart {
     };
     //console.log('adres', thisCart.payload.adress);
     for (const product of thisCart.products) {
-      product.getData();
-      payload.products.push(product);
+      const singleProduct = product.getData();
+      payload.products.push(singleProduct);
     }
     const options = {
       method: 'POST',
