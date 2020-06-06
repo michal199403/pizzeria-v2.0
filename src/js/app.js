@@ -100,7 +100,6 @@ const app = {
     const thisApp = this;
     const bookingContainer = document.querySelector(select.containerOf.booking);
     thisApp.booking = new Booking(bookingContainer);
-    console.log('app', thisApp.booking);
   },
 };
 app.init();
