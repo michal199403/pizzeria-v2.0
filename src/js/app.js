@@ -83,6 +83,7 @@ const app = {
     thisApp.initPages();
     thisApp.initData();
     thisApp.initBooking();
+    thisApp.initCart();
   },
 
   initCart: function () {
