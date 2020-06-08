@@ -30,5 +30,8 @@
     "no-console": [
       "off"
     ]
+  },
+  "globals": {
+    "flatpickr": false
   }
 }
