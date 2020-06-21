@@ -60,7 +60,7 @@ class CartProduct {
     const thisCartProduct = this;
     return {
       id: thisCartProduct.id,
-      amount: thisCartProduct.amount,
+      amount: thisCartProduct.amountWidget.value,
       price: thisCartProduct.price,
       priceSingle: thisCartProduct.priceSingle,
       params: thisCartProduct.params
