@@ -122,6 +122,7 @@ class Booking {
 
   updateDOM() {
     const thisBooking = this;
+    this.clearTable();
 
     thisBooking.date = thisBooking.datePicker.value;
     thisBooking.hour = utils.hourToNumber(thisBooking.hourPicker.value);
@@ -156,11 +157,11 @@ class Booking {
 
   chooseTable(clickedTable) {
     const thisBooking = this;
-    const tableClass = clickedTable.classList.contains(classNames.booking.tableSelected);
-    console.log('table class', tableClass);
+    const selectedTable = clickedTable.classList.contains(classNames.booking.tableSelected);
+    console.log('table class', selectedTable);
     thisBooking.clearTable();
 
-    if (clickedTable.classList.contains(classNames.booking.tableBooked) || tableClass) {
+    if (clickedTable.classList.contains(classNames.booking.tableBooked) || selectedTable) {
       clickedTable.classList.remove(classNames.booking.tableSelected);
     } else {
       clickedTable.classList.add(classNames.booking.tableSelected);
@@ -244,16 +245,12 @@ class Booking {
     thisBooking.datePicker = new DatePicker(thisBooking.dom.datePicker);
     thisBooking.hourPicker = new HourPicker(thisBooking.dom.hourPicker);
 
-    thisBooking.dom.wrapper.addEventListener('updated', function () {
-      thisBooking.updateDOM();
-    });
     thisBooking.dom.datePicker.addEventListener('updated', function () {
-      thisBooking.clearTable();
-      thisBooking.date = thisBooking.datePicker.value;
+      thisBooking.updateDOM();
     });
 
     thisBooking.dom.hourPicker.addEventListener('updated', function () {
-      thisBooking.clearTable();
+      thisBooking.updateDOM();
     });
 
     thisBooking.dom.submit.addEventListener('click', function () {
