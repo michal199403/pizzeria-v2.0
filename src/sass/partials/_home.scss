@@ -23,14 +23,14 @@
 
 
   a {
-  position: absolute;
-  text-decoration: none;
-  text-align: center;
-  top: 33%;
-  right: 22%;
-  color: $color-light;
-  font-size: 24px;
-  transition: 1s;
+    position: absolute;
+    text-decoration: none;
+    text-align: center;
+    top: 33%;
+    right: 22%;
+    color: $color-light;
+    font-size: 24px;
+    transition: 1s;
   }
 }
 
@@ -177,7 +177,7 @@
   opacity: 0;
   align-items: center;
   justify-content: center;
-  background:  rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
   color: $color-light;
   transition: all 0.5s;
   border-radius: $radius;
