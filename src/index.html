@@ -15,7 +15,6 @@
 </head>
 
 <body>
-
   <header class="header">
     <div class="container">
       <div class="header__wrapper">
@@ -24,6 +23,7 @@
           <h2 class="logo__subtitle">the best homemade Italian food</h2>
         </div>
         <div class="main-nav">
+          <a href="#home">Home</a>
           <a href="#order">Order</a>
           <a href="#booking">Booking</a>
         </div>
@@ -65,6 +65,109 @@
   </header>
 
   <div id="pages">
+    <section id="home">
+      <div class="home-wrapper container">
+        <div class="home-page navigation">
+          <div class="home-buttons order">
+            <a href="#order" class="nav-links order">ORDER ONLINE</a>
+            <div class="home-image">
+              <img src="images/home/pizza-1.jpg" alt="#">
+              <p class="hover-text">Deliver right on yours doorstep!</p>
+            </div>
+          </div>
+          <div class="home-buttons book">
+            <a href="#booking" class="nav-links book">BOOK A TABLE</a>
+            <div class="home-image">
+              <img src="images/home/pizza-2.jpg" alt="#">
+              <p class="hover-text">Come, pay us a visit!</p>
+            </div>
+          </div>
+          <div class="open-hours">
+            <h1>OPENING HOURS:</h1>
+            <P>TUE-SUN, 12PM-12AM</P>
+          </div>
+          <div class="carousel-container">
+            <div class="home-carousel">
+              <div class="carousel-img">
+                <img src="images/home/pizza-3.jpg" alt="">
+              </div>
+              <div class="carousel-opinion">
+                <div class="slide">
+                  <p class="opinion-title">AMAZING SERVICE!</p>
+                  <p class="opinion-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p class="opinion-author"> - Margaret Osborn</p>
+                </div>
+                <div class="slide">
+                  <p class="opinion-title">DELICIOUS FOOD!</p>
+                  <p class="opinion-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua!</p>
+                  <p class="opinion-author">- Fernando Ramirez</p>
+                </div>
+                <div class="slide">
+                  <p class="opinion-title">BEAUTIFUL PLACE!</p>
+                  <p class="opinion-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua!</p>
+                  <p class="opinion-author">- Carmen Delarosa </p>
+                </div>
+              </div>
+            </div>
+            <div class="dots-carousel">
+              <button id="dot1" class="carousel-dot"></button>
+              <button id="dot2" class="carousel-dot"></button>
+              <button id="dot3" class="carousel-dot"></button>
+            </div>
+          </div>
+          <div class="home-gallery">
+            <div class="gallery-img">
+              <img src="images/home/pizza-4.jpg" class="image" alt="">
+              <div class="image-overlay icons">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+              </div>
+            </div>
+            <div class="gallery-img">
+              <img src="images/home/pizza-5.jpg" class="image" alt="">
+              <div class="image-overlay icons">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+              </div>
+            </div>
+            <div class="gallery-img">
+              <img src="images/home/pizza-6.jpg" class="image" alt="">
+              <div class="image-overlay icons">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+              </div>
+            </div>
+            <div class="gallery-img">
+              <img src="images/home/pizza-7.jpg" class="image" alt="">
+              <div class="image-overlay icons">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+              </div>
+            </div>
+            <div class="gallery-img">
+              <img src="images/home/pizza-8.jpg" class="image" alt="">
+              <div class="image-overlay icons">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+              </div>
+            </div>
+            <div class="gallery-img">
+              <img src="images/home/pizza-9.jpg" class="image" alt="">
+              <div class="image-overlay icons">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+              </div>
+            </div>
+          </div>
+          <div class="footer">
+            <a href="#">View more on Instagram</a>
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="order">
       <div id="product-list" class="product-list container"></div>
     </section>
@@ -72,7 +175,6 @@
       <div class="booking-wrapper container"></div>
     </section>
   </div>
-
   <script id="template-booking-widget" type="text/x-handlebars-template">
     <div class="booking-widget">
       <h2 class="page__title no-spacing">Book a table</h2>
@@ -138,7 +240,6 @@
       </form>
     </div>
   </script>
-
   <script id="template-cart-product" type="text/x-handlebars-template">
     <li>
       <div class="widget-amount"> <!-- widget-amount -->
@@ -166,10 +267,8 @@
       </ul>
     </li>
   </script>
-
   <script id="template-menu-product" type="text/x-handlebars-template">
     <article class="product"> <!-- product -->
-
         <header class="product__header">
           <h3 class="product__name no-spacing">{{ name }} <i class="fas fa-chevron-down product__icon"></i></h3>
           <p class="product__base-price no-spacing">${{ price }}</p>
@@ -242,10 +341,8 @@
             {{/each}}
           </div>
         </div>
-
     </article> <!-- .product -->
   </script>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="vendor/range-slider.min.js"></script>

@@ -84,6 +84,7 @@ const app = {
     thisApp.initData();
     thisApp.initBooking();
     thisApp.initCart();
+    thisApp.initCarousel();
   },
 
   initCart: function () {
@@ -101,5 +102,28 @@ const app = {
     const bookingWidget = document.querySelector(select.containerOf.booking);
     thisApp.booking = new Booking(bookingWidget);
   },
+
+  initCarousel() {
+    let slideIndex = 0;
+    function showSlides() {
+      const slides = document.querySelectorAll('.slide');
+      const dots = document.querySelectorAll('.carousel-dot');
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove('active');
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove('active');
+      }
+      slides[slideIndex - 1].classList.add('active');
+      dots[slideIndex - 1].classList.add('active');
+      setTimeout(showSlides, 5000);
+    }
+    showSlides();
+  },
+
 };
 app.init();
